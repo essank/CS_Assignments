@@ -1,4 +1,2 @@
 # CS_Assignments
-Here is my CS Assignments :D
-
-
+Here is my CS Assignments 👍
