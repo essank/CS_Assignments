@@ -1,16 +1,4 @@
-## Author: Issa Alkhamees
-## Due Date: September 29
-## Class: CSCI 2000
-## Instructor: Dr. Eaton
-## Program Assignment: 4
-## Program Title: state income tax
-##  Program Description:
-##  This program calculates a person's state income tax
-##
-## Plagiarism Statement:
-##  I swear that I have not received or given aid on this program
-##  beyond guidelines of the course including giving or receiving
-##  specific code content.
+
 
 income= " "
 tax = 0
