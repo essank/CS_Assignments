@@ -1,17 +1,3 @@
-## Author: Issa Alkhamees
-## Due Date: October 25
-## Class: CSCI 2000
-## Instructor: Dr. Greer
-## Program Assignment: 8
-## Program Title: FunWithFunctions
-## Program Description:
-##  This program changed the pattern every time.
-##
-## Plagiarism Statement:
-##  I swear that I have not received or given aid on this program
-##  beyond guidelines of the course including giving or receiving
-##  specific code content.
-
 def main():
 
     ## Print Menu
