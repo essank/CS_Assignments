@@ -1,17 +1,3 @@
-## Author: Issa Alkhamees
-## Due Date: October 23
-## Class: CSCI 2000
-## Instructor: Dr. Greer
-## Program Assignment: 7
-## Program Title: FunWithNestedLoops
-## Program Description:
-##  This program changed the pattern every time.
-##
-## Plagiarism Statement:
-##  I swear that I have not received or given aid on this program
-##  beyond guidelines of the course including giving or receiving
-##  specific code content.
-
 #Pattern 1
 #Ask the user to input the pattern number
 rows = int(input("Pattern 1 How many rows (3-20)?"))
