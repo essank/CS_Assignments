@@ -17,34 +17,19 @@ Pattern 4\n''')
         num = getChoice() ## Call getChoice function.
 
         if num == 1: ## user chooses pattern 1
-            rows = int(input("Pattern 1 How many rows (3-20) "))
-            for i in range(1, rows+1):
-                for j in range(1, rows+1):
-                    print("*", end ="")
-                print()
+            square()
 
         elif num == 2: ## user chooses pattern 2
-            rows = int(input("Patten 2 How many rows(3-20) "))
-            for i in range(0, rows):
-                print(" " * (rows - i), end="")
-                for j in range(0, i+1):
-                    print("*", end = "")
-                print()
+            triangle1()
+
 
         elif num == 3: ## user chooses pattern 3
-            rows = int(input("Pattern 3 How many rows(3-20) "))
-            for i in range(rows, 0, -1):
-                for j in range(i, 0, -1):
-                    print("*", end = "")
-                print()
+            triangle2()
+
 
         elif num == 4: ## user chooses pattern 4
-            rows = int(input("Pattern 4 How many rows(3-20) "))
-            for i in range(0,rows):
-                print("*", end = "")
-                for j in range(1, i+1):
-                    print(" ", end = "")
-                print("*")
+            stair()
+
 
         elif num == 5: ## user chooses to quit
             done = True
@@ -70,6 +55,70 @@ def getChoice():
             validInput = True
 
     return choice
+
+# pattern 1 function
+def square():
+    validInput = False
+    while not validInput:
+        rows = int(input("\nPattern 1 How many rows(3-20) "))
+        if rows >=3 and rows <=20:
+            for i in range(1, rows+1):
+                for j in range(1, rows+1):
+                    print("*", end ="")
+                print()
+                validInput = True
+        else:
+            print("Values must be between 3 and 20")
+
+# pattern 2 function
+def triangle1():
+    validInput = False
+    while not validInput:
+        rows = int(input("\nPattern 2 How many rows(3-20) "))
+        if rows >=3 and rows <=20:
+            for i in range(0, rows):
+                print(" " * (rows - i), end="")
+                for j in range(0, i+1):
+                    print("*", end = "")
+                print()
+                validInput = True
+
+        else:
+            print("Values must be between 3 and 20")
+
+# pattern 3 function
+def triangle2():
+    validInput = False
+    while not validInput:
+        rows = int(input("\nPattern 3 How many rows(3-20) "))
+        if rows >=3 and rows <=20:
+            for i in range(rows, 0, -1):
+                for j in range(i, 0, -1):
+                    print("*", end = "")
+                print()
+                validInput = True
+
+        else:
+            print("Values must be between 3 and 20")
+
+# pattern 4 function
+def stair():
+    validInput = False
+    while not validInput:
+        rows = int(input("\nPattern 4 How many rows(3-20) "))
+        if rows >=3 and rows <=20:
+            for i in range(0,rows):
+                print("*", end = "")
+                for j in range(1, i+1):
+                    print(" ", end = "")
+                print("*")
+                validInput = True
+
+        else:
+            print("Values must be between 3 and 20")
+
+
+
 
 ##Program starts here.
 ##Call main function.
