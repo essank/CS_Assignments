@@ -63,15 +63,15 @@ public class OrderTickets {
         System.out.print("\n---------------------------------------------------");
 
         System.out.print("\n\n===================================================");
-        System.out.printf("\n||  Cerebral Stage  ||  Show: " + show + "||");
+        System.out.printf("\n||  Cerebral Stage  ||  Show: " + show + "        ||");
         System.out.print("\n||                  ||                             ||");
-        System.out.printf("\n||     Official     ||  Name:  " + name + "||");
+        System.out.printf("\n||     Official     ||  Name:  " + name + "       ||");
         System.out.print("\n||                  ||                             ||");
-        System.out.printf("\n||      Online      ||  Date: " + date + "||");
+        System.out.printf("\n||      Online      ||  Date: " + date + "        ||");
         System.out.print("\n||                  ||                             ||");
-        System.out.printf("\n||      Ticket      ||  Section: " + tickets + "");
+        System.out.printf("\n||      Ticket      ||  Section: " + tickets + "  ||");
         System.out.print("\n===================================================");
 
         System.out.print("\n\nEnjoy the show!");
     }
-} 
+}
