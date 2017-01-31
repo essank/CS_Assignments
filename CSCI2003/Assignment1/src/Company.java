@@ -13,13 +13,10 @@
 // Program Description: simulate a company roster
 
 public class Company
-
 {
-
     public static void main (String[] args) //defining main method
 
     {
-
         // creating 2 objects using non argument constructor
 
         Employee company1 = new Employee("Susan Meyers",47899,"Accounting","Vice President");
@@ -49,7 +46,5 @@ public class Company
         company3.setEmployeePosition("Engineer");
 
         System.out.printf("\n%-20s%-20s%-20s%-20s",company3.getEmployeeName(),company3.getEmployeeId(),company3.getEmployeeDepartment(),company3.getEmployeePosition());
-
     }
-
 }
