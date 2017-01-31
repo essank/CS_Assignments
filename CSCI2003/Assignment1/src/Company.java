@@ -33,7 +33,7 @@ public class Company
 
         System.out.println("\n-----------------------------------------------------------------------------");
 
-        System.out.printf("%-20s%-20s%-20s%-20s",company1.getEmployeeName(),company1.getEmployeeId(),company1.getEmployeeId(),company1.getEmployeePosition());
+        System.out.printf("%-20s%-20s%-20s%-20s",company1.getEmployeeName(),company1.getEmployeeId(),company1.getEmployeeDepartment(),company1.getEmployeePosition());
 
         System.out.printf("\n%-20s%-20s%-20s%-20s",company2.getEmployeeName(),company2.getEmployeeId(),company2.getEmployeeDepartment(),company2.getEmployeePosition());
 
