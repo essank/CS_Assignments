@@ -1,12 +1,3 @@
-// Name: Issa Alkhamees Date Assigned: 1/31
-//
-// Course: CSCI 2003 42733 Date Due: 2/10
-// Instructor: Ms. Greer
-//
-// File name: RoomTester.java
-//
-// Program Description: simulate an online store that sells paint.
-
 public class RoomTester
 {
     public static void main (String[] args)
@@ -20,37 +11,43 @@ public class RoomTester
         System.out.print("TESTING ARGUMENT CONSTRUCTOR");
         System.out.print("\n----------------------------");
 
-        System.out.println("\n" + room1.getNumberOfWalls());
-        System.out.println("\nExpected: 3");
+        System.out.print("\n\n" + room1.getNumberOfWalls());
+        System.out.print("\nExpected: 3\n");
 
-        System.out.println("\n" + room1.getHeight());
-        System.out.println("\nExpected: 10.0");
+        System.out.print("\n" + room1.getHeight());
+        System.out.print("\nExpected: 10.0\n");
 
-        System.out.println("\n" + room1.getWidth());
-        System.out.println("\nExpected: 15.0");
+        System.out.print("\n" + room1.getWidth());
+        System.out.print("\nExpected: 15.0\n");
 
-        System.out.println("\n" + room1.getArea());
+        System.out.print("\n" + room1.getArea());
+        System.out.print("\nExpected: 450.0\n");
 
-        System.out.println("\nTesting toString Method");
-        System.out.println("\n-----------------------");
-        System.out.println("\n" + room1.toString());
+        System.out.print("\n\nTesting toString Method");
+        System.out.print("\n-----------------------");
+        System.out.print("\n" + room1.toString());
 
-        System.out.println("\nTESTING NO-ARGUMENT CONSTRUCTOR");
-        System.out.println("\n-------------------------------");
+        System.out.print("\n\nTESTING NO-ARGUMENT CONSTRUCTOR");
+        System.out.print("\n-------------------------------");
+         
+        room2.setNumberOfWalls(3);
+        System.out.print("\n\n" + room2.getNumberOfWalls());
+        System.out.print("\nExpected: 3\n");
 
-        System.out.println("\n" + room2.getNumberOfWalls());
-        System.out.println("\nExpected: 3");
+        room2.setHeight(10);
+        System.out.print("\n" + room2.getHeight());
+        System.out.print("\nExpected: 10.0\n");
 
-        System.out.println("\n" + room2.getHeight());
-        System.out.println("Expected: 10.0");
+        room2.setWidth(15);
+        System.out.print("\n" + room2.getWidth());
+        System.out.print("\nExpected: 15.0\n");
 
-        System.out.println("\n" + room2.getWidth());
-        System.out.println("\nExpected: 15.0");
+        System.out.print("\n" + room2.getArea());
+        System.out.print("\nExpected: 450.0\n");
 
-        System.out.println("\n" + room2.getArea());
 
-        System.out.println("\nTesting toString Method");
-        System.out.println("\n-----------------------");
-        System.out.println("\n" + room2.toString());
+        System.out.print("\n\nTesting toString Method");
+        System.out.print("\n-----------------------");
+        System.out.print("\n" + room2.toString());
     }
 }
