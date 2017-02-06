@@ -11,8 +11,11 @@ public class RoomTester
 {
     public static void main (String[] args)
     {
-        Room room1 = new Room(3, 10, 15); // calling argument constructor
-        Room room2 = new Room(); //calling the non-argument constructor
+        // calling argument constructor
+        Room room1 = new Room(3, 10, 15);
+
+        //calling the non-argument constructor
+        Room room2 = new Room();
 
         System.out.print("TESTING ARGUMENT CONSTRUCTOR");
         System.out.print("\n----------------------------");

@@ -13,7 +13,7 @@ public class Room
     private double height;
     private double width;
 
-    // no-argument constractor
+    // no-argument constructor
     public Room(int nW, double h, double w)
     {
         numberOfWalls = nW;
@@ -21,7 +21,7 @@ public class Room
         width = w;
     }
 
-    //argument constractor
+    //argument constructor
     public Room()
     {
         numberOfWalls = 0;
@@ -30,32 +30,38 @@ public class Room
     }
 
     //setters
+    //set number of wall
     public void setNumberOfWalls(int nW)
     {
         numberOfWalls = nW;
     }
 
+    //set the height
     public void setHeight(int h)
     {
         height = h;
     }
 
+    //set the width
     public void setWidth(int w)
     {
         width = w;
     }
 
     //getters
+    //return number of wall value
     public int getNumberOfWalls()
     {
         return numberOfWalls;
     }
 
+    //return the height value
     public double getHeight()
     {
         return height;
     }
 
+    //return the width value
     public double getWidth()
     {
         return width;
