@@ -10,24 +10,23 @@
 public class Room
 {
     private int numberOfWalls;
-    private int height;
-    private int width;
+    private double height;
+    private double width;
 
     // no-argument constractor
-    public Room
-    {
-        numberOfWalls = 0;
-        height = 0;
-        width = 0;
-        totalArea = 0;
-    }
-
-    //argument constractor
-    public Room (int nW, int h, int w)
+    public Room(int nW, double h, double w)
     {
         numberOfWalls = nW;
         height = h;
         width = w;
+    }
+
+    //argument constractor
+    public Room()
+    {
+        numberOfWalls = 0;
+        height = 0;
+        width = 0;
     }
 
     //setters
@@ -49,15 +48,15 @@ public class Room
     //getters
     public int getNumberOfWalls()
     {
-        return numerOfWalls;
+        return numberOfWalls;
     }
 
-    public int getHeight()
+    public double getHeight()
     {
         return height;
     }
 
-    public int getWidth()
+    public double getWidth()
     {
         return width;
     }
@@ -70,8 +69,9 @@ public class Room
 
     public String toString()
     {
-        return  "Number of walls:  " + numberOfWalls +
-                "\nHeight of the wall:  " + height +
-                "\n Width of the wall:  " + width + "\n";
+        return "Walls:   "+ numberOfWalls
+                +"\nHeight:  "+ height
+                +" ft" +"\nWidth:   "
+                + width +" ft";
     }
 }
