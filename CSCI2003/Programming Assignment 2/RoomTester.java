@@ -17,8 +17,24 @@ public class RoomTester
         System.out.print("TESTING ARGUMENT CONSTRUCTOR");
         System.out.print("\n----------------------------");
 
-        System.out.print("\n" + room1.getNumberOfWalls);
+        System.out.print("\n" + room1.getNumberOfWalls());
+        System.out.print("\nExpected: 3");
 
+        System.out.print("\n" + room1.getHeight());
+        System.out.println("Expected: 10.0");
 
+        System.out.print("\n" + room1.getWidth());
+        System.out.print("\nExpected: 15.0");
+
+        System.out.print("\n" + room1.getArea());
+
+        System.out.print("\nTesting toString Method");
+        System.out.print("\n-----------------------");
+        System.out.print("\n" + room1.toString());
+
+        System.out.print("\nTESTING NO-ARGUMENT CONSTRUCTOR");
+        System.out.print("\n-------------------------------");
+
+        System.out.print("\n" room2.getNumberOfWalls());
     }
 }
