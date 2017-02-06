@@ -12,7 +12,6 @@ public class Room
     private int numberOfWalls;
     private int height;
     private int width;
-    private int totalArea;
 
     // no-argument constractor
     public Room
@@ -64,9 +63,9 @@ public class Room
     }
 
     //calculates the area
-    public void totalArea()
+    public double getArea()
     {
-        totalArea = height * width;
+       return numberOfWalls * width * height;
     }
 
     public String toString()

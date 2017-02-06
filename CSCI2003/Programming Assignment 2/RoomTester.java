@@ -9,5 +9,16 @@
 
 public class RoomTester
 {
+    public static void main (String[] args)
+    {
+        Room room1 = new Room(3, 10, 15); // calling argument constructor
+        Room room2 = new Room(); //calling the non-argument constructor
 
+        System.out.print("TESTING ARGUMENT CONSTRUCTOR");
+        System.out.print("\n----------------------------");
+
+        System.out.print("\n" + room1.getNumberOfWalls);
+
+
+    }
 }
