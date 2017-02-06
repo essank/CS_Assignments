@@ -7,6 +7,7 @@
 //
 // Program Description: simulate an online store that sells paint.
 
+import java.util.Scanner;
 public class PaintStore
 {
 
