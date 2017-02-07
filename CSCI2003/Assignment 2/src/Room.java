@@ -1,57 +1,74 @@
-import java.util.Scanner;
-
-public class PaintStore
+public class Room
 {
-    public static void main (String[] args)
+    private int numberOfWalls;
+    private double height;
+    private double width;
+
+    // no-argument constructor
+    public Room(int nW, double h, double w)
     {
-        Scanner key = new Scanner(System.in);
-        System.out.println("Welcome to the Paint Store!");
-        System.out.println("===========================");
+        numberOfWalls = nW;
+        height = h;
+        width = w;
+    }
 
-        System.out.println("\nStep 1: Choose your paint color");
-        System.out.println("-------------------------------");
+    //argument constructor
+    public Room()
+    {
+        numberOfWalls = 0;
+        height = 0;
+        width = 0;
+    }
 
-        System.out.println("purple   green");
-        System.out.println("blue     teal");
-        System.out.println("yellow   red");
+    //setters
+    //set number of wall
+    public void setNumberOfWalls(int nW)
+    {
+        numberOfWalls = nW;
+    }
 
-        //user inputs color
-        System.out.print("\nEnter a paint color: ");
-        String color = key.nextLine();
+    //set the height
+    public void setHeight(int h)
+    {
+        height = h;
+    }
 
-        System.out.println("\n\nStep 2: Tell us about your room");
-        System.out.println("-------------------------------");
+    //set the width
+    public void setWidth(int w)
+    {
+        width = w;
+    }
 
-        //user enters number of walls to color
-        System.out.print("Enter the number of walls in the room: ");
-        int numberOfWalls = key.nextInt();
+    //getters
+    //return number of wall value
+    public int getNumberOfWalls()
+    {
+        return numberOfWalls;
+    }
 
-        //user enters the height and width
-        System.out.print("Enter the height of one wall: ");
-        double height = key.nextDouble();
+    //return the height value
+    public double getHeight()
+    {
+        return height;
+    }
 
-        System.out.print("Enter the width of one wall: ");
-        double width = key.nextDouble();
+    //return the width value
+    public double getWidth()
+    {
+        return width;
+    }
 
-        System.out.println("\n\nStep 3: Paint needed");
-        System.out.println("--------------------");
+    //calculates the area
+    public double getArea()
+    {
+       return numberOfWalls * width * height;
+    }
 
-        //calling the number argument constructor
-        Room room3 = new Room(numberOfWalls, height, width);
-
-        //calculating number of cans
-        double cans = Math.ceil((room3.getArea()/250));
-
-        //printing the required outputs
-        System.out.printf("You need %.0f cans of %s paint to cover %.1f sqft.", cans, color,room3.getArea());
-
-        System.out.println("\n\n\nStep 4: Final price");
-        System.out.println("-------------------");
-
-        System.out.printf("Subtotal: $%.2f",(cans*8.99));
-        System.out.printf("\nTax:      $%.2f",(cans*8.99)*0.11);
-        System.out.printf("\nTotal:    $%.2f",(cans*8.99)+ ((cans*8.99)*0.11));
-
-        System.out.println("\n\nThank you for shopping with us!");
+    public String toString()
+    {
+        return "Walls:   "+ numberOfWalls
+                +"\nHeight:  "+ height
+                +" ft" +"\nWidth:   "
+                + width +" ft";
     }
 }
