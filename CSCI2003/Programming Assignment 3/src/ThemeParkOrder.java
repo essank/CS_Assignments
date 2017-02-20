@@ -136,5 +136,96 @@ public class ThemeParkOrder {
         return priceChildTicket;
     }
 
+    /**
+     * return the discount
+     * @return
+     */
+
+    String x = null;
+    public String getDiscount()
+    {
+        //calculate the discount by if statements
+        if (getNumberAdultTicket() + getNumberChildTicket() < 3)
+        {
+            x = "0%";
+        }
+
+        if (getNumberAdultTicket() + getNumberChildTicket() == 3)
+        {
+            x = "5%";
+        }
+
+        if (getNumberAdultTicket() + getNumberChildTicket() == 4)
+        {
+            x = "10";
+        }
+
+        if (getNumberAdultTicket() + getNumberChildTicket() == 5)
+        {
+            x = "15%";
+        }
+
+        if (getNumberAdultTicket() + getNumberChildTicket() > 5)
+        {
+            x = "20%";
+        }
+        return x;
+    }
+
+    /**
+     * return the subtotal
+     * @return
+     */
+
+    double y;
+    public double getSubtotal()
+    {
+        if (getDiscount() == "0%")
+        {
+            y = ((getNumberAdultTicket() * getPriceAdultTicket()) + (getNumberChildTicket() * getPriceAdultTicket()));
+        }
+
+        if (getDiscount() == "5%")
+        {
+            y = ((getNumberAdultTicket() * getPriceAdultTicket()) + (getNumberChildTicket() * getPriceAdultTicket())) - (0.05)
+                    * ((getNumberAdultTicket() * getPriceAdultTicket()) + (getNumberChildTicket() * getPriceAdultTicket()));
+        }
+
+        if (getDiscount() == "10%")
+        {
+            y = ((getNumberAdultTicket() * getPriceAdultTicket()) + (getNumberChildTicket() * getPriceAdultTicket())) - (0.1)
+                    * ((getNumberAdultTicket() * getPriceAdultTicket()) + (getNumberChildTicket() * getPriceAdultTicket()));
+        }
+
+        if (getDiscount() == "15%")
+        {
+            y = ((getNumberAdultTicket() * getPriceAdultTicket()) + (getNumberChildTicket() * getPriceAdultTicket())) - (0.15)
+                    * (getNumberAdultTicket() * getPriceAdultTicket() + getNumberChildTicket() * getPriceChildTicket());
+        }
+
+        if (getDiscount() == "20%")
+        {
+            y = (getNumberAdultTicket() * getPriceAdultTicket()) + (getNumberChildTicket() * getPriceChildTicket()) - (0.2)
+                    * ((getNumberAdultTicket() * getPriceAdultTicket()) + (getNumberChildTicket() * getPriceChildTicket()));
+        }
+
+        return y;
+    }
+
+    // display the order
+    public void order()
+    {
+        System.out.println("\n"+getName()+" Ticket Order");
+        System.out.println("------------------------------------");
+        System.out.printf("Discount:%19s", getDiscount());
+
+        System.out.printf("\n\nAdult:%10s x $%8.2f", getNumberAdultTicket(),getPriceAdultTicket());
+        System.out.printf("\nChild:%10s x $%8.2f", getNumberChildTicket(),getPriceChildTicket());
+
+        System.out.println("\n------------------------------------");
+        System.out.printf("Subtotal:%10s$%8.2f", "", getSubtotal());
+        System.out.printf("\nTax:%15s$%8.2f", "", (0.11 * getSubtotal()));
+        System.out.printf("\nTotal:%13s$%8.2f", "", getSubtotal() + (0.11*getSubtotal()));
+    }
 }
 
