@@ -36,6 +36,7 @@ public class ThemeParkOnlineTickets {
 
         if (choose == 1)
         {
+            // print choose 1 output
             park1.setName("Universal Studios");
             System.out.println("\n\n+-----------------------+-----------------+-----------------+");
             System.out.println("|      THEME PARK       |   ADULT TICKET  |   CHILD TICKET  |");
@@ -48,6 +49,7 @@ public class ThemeParkOnlineTickets {
 
         if (choose == 2)
         {
+            // print choose 2 output
             park1.setName("Magic Kingdom");
             System.out.println("\n\n+-----------------------+-----------------+-----------------+");
             System.out.println("|      THEME PARK       |   ADULT TICKET  |   CHILD TICKET  |");
@@ -60,6 +62,7 @@ public class ThemeParkOnlineTickets {
 
         if (choose == 3)
         {
+            // print choose 3 output
             park1.setName("Epcot");
             System.out.println("\n\n+-----------------------+-----------------+-----------------+");
             System.out.println("|      THEME PARK       |   ADULT TICKET  |   CHILD TICKET  |");
