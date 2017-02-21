@@ -73,15 +73,21 @@ public class ThemeParkOnlineTickets {
             park1.setNumberChildTicket(108);
         }
 
+        //taking input from the user for adult tickets
         System.out.print("\nNumber of Adult Tickets: ");
         int adultTicket = key.nextInt();
 
+        //taking input from the user for childes tickets
         System.out.print("Number of Child Tickets: ");
         int childTicket = key.nextInt();
 
+        //setting the price adult ticket
         park1.setPriceAdultTicket(adultTicket);
+
+        // setting the price child ticket
         park1.setPriceChildTicket(childTicket);
 
+        // printing out the ticket details
         park1.order();
     }
 }
