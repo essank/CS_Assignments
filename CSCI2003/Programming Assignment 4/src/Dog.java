@@ -12,97 +12,113 @@ public class Dog {
     private String size;
     private String coatLength;
 
+    //no-argument constructor
     public Dog()
     {
          size = "";
          coatLength = "";
     }
-
+   
+    //argument constructor
     public Dog (String s, String c)
     {
         size = s;
         coatLength = c;
     }
 
+    //setters
+    //set size of the dog
     public void setSize(String s)
     {
          size = s;
     }
-
+   //set coat length of the dog
     public void setCoatLen(String c)
     {
         coatLength = c;
     }
 
+    //getters
+    //return the dog size
     public String getSize()
     {
         return size;
     }
 
+    //return coat lenght of the dog
     public String getCoatLength()
     {
         return coatLength;
     }
 
-    String breed;
+    // create breed as a string 
     public String getBreed()
     {
-
+    
+    String breed = "";
+         
+        //if statment check getSize value 
         if (getSize() == "Small")
         {
+            //check getCoatLength value 
             if (getCoatLength() == "Short")
             {
                 System.out.print("Pug");
             }
 
-            if (getCoatLength() == "Medium")
+           else if (getCoatLength() == "Medium")
             {
                 System.out.print("Shiba Inu");
             }
 
-            if (getCoatLength() == "Long")
+           else if (getCoatLength() == "Long")
             {
                 System.out.print("Long");
             }
 
         }
-
-        if (getSize() == "Medium")
+        
+        // else if statment check getSize value
+        else if (getSize() == "Medium")
         {
+            //check getCoatLength value
             if (getCoatLength() == "Short")
             {
                 System.out.print("Basset Hound");
             }
 
-            if (getCoatLength() == "Medium")
+            else if (getCoatLength() == "Medium")
             {
                 System.out.print("Gordon Setter");
             }
 
-            if (getCoatLength() == "Long")
+           else if (getCoatLength() == "Long")
             {
                 System.out.print("Irish Setter");
             }
         }
-
-        if (getSize() == "Large")
+        
+        // else if statment check getSize value
+        else if (getSize() == "Large")
         {
+            //check getCoatLength value
             if (getCoatLength() == "Short")
             {
                 System.out.print("Weimaraner");
             }
 
-            if (getCoatLength() == "Medium")
+            else if (getCoatLength() == "Medium")
             {
                 System.out.print("Goldendoodle");
             }
 
-            if (getCoatLength() == "Long")
+            else  if (getCoatLength() == "Long")
             {
                 System.out.print("Belgian Sheepdog");
             }
         }
-
+        
+        //return breed value
         return breed;
     }
 }
