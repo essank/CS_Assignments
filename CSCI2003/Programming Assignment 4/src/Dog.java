@@ -78,7 +78,7 @@ public class Dog {
 
         }
         
-        // else if statment check getSize value
+        // else if statement check getSize value
         else if (getSize() == "Medium")
         {
             //check getCoatLength value
@@ -98,7 +98,7 @@ public class Dog {
             }
         }
         
-        // else if statment check getSize value
+        // else if statement check getSize value
         else if (getSize() == "Large")
         {
             //check getCoatLength value
