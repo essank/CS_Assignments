@@ -20,7 +20,8 @@ public class Planner
     public static void main(String[] args) throws FileNotFoundException
     {
 
-        Scanner in = new Scanner(System.in); // scanner
+        // scanner
+        Scanner in = new Scanner(System.in);
 
         System.out.println("Personal Planner");
         System.out.println("================");
@@ -51,7 +52,7 @@ public class Planner
             {
                 File infile = new File("planner.txt"); // file to read from
                 PrintWriter outfile = new PrintWriter("records.txt"); // file to write in
-                Scanner imn = new Scanner(infile);
+                Scanner imn = new Scanner(infile); // scanner
 
                 while (imn.hasNextLine())
                 {
@@ -65,12 +66,13 @@ public class Planner
                 //object to write to the file planner
                 PrintWriter outfile1 = new PrintWriter("planner.txt");
 
+                //asking user for input
                 System.out.print("Enter date (MM/DD/YY): ");
                 in.nextLine();
                 date = in.nextLine();
 
                 System.out.print("Enter time (HH:MM): ");
-                time = in.nextLine();                     //asking user for input
+                time = in.nextLine();
 
                 System.out.print("Enter location: ");
                 location = in.nextLine();
