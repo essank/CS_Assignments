@@ -80,8 +80,8 @@ public class Planner
                 System.out.print("Enter event: ");
                 event = in.nextLine();
 
-                File k = new File("records.txt");  //file object
-                Scanner ifile1 = new Scanner(k);            //object to read from file
+                File temp = new File("records.txt");  //file object
+                Scanner ifile1 = new Scanner(temp);            //object to read from file
 
                 //writing from the temporary file to planner file
                 while (ifile1.hasNextLine())
