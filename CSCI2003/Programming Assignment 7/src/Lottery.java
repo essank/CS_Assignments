@@ -13,32 +13,53 @@
 import java.util.Random;    //importing Random class
 import java.util.Scanner;   //importing Scanner class
 
-public class Lottery {
+public class Main {
     public static void main (String[] args)
     {
-        System.out.print("Instant Lottery");
-        System.out.print("\n===============");
-        System.out.print("\n\nOptions:" +
+    
+       int qui = 3;
+       int sum = 0;
+       boolean num = false;
+      
+      System.out.print("Instant Lottery");
+      System.out.print("\n===============");
+      
+      Random generator = new Random(); // create random object
+      Scanner in = new Scanner(System.in); // create scanner object
+      
+      
+      while(!num)
+      {
+        System.out.print("\n\nOptions: " +
                 "\n========" +
                 "\n1. Choose Numbers" +
                 "\n2. Check Winnings" +
                 "\n3. Quit");
-
-        Random generator = new Random(); // create random object
-        Scanner in = new Scanner(System.in); // create scanner object
-
-        System.out.print("\n\nEnter choice (1, 2, or 3):");
-        int choice = in.nextInt();
-
-        System.out.print("\n---------------------------------");
-
-        System.out.print("\nNumber Options:" +
-                "\n===============" +
-                "\n1. Choose Your Numbers" +
-                "\n2. Quick Pick");
-
-        System.out.print("\n\nEnter choice (1 or 2):");
+                
+        System.out.print("\n\nEnter choice (1, 2, or 3): ");
         int options = in.nextInt();
-
-    }
+            
+                  
+                  while (qui!= 3)
+                  {
+                    
+                    try
+                    {
+                      
+                     
+                    }
+                      
+                    catch (NumberFormatException except)
+                      {
+                        
+                      }
+                      
+                     
+                    finally
+                    {
+                      
+                    }
+                  }
+      }//while
+    }//
 }
