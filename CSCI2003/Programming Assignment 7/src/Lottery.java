@@ -13,10 +13,9 @@
 import java.util.Random;    //importing Random class
 import java.util.Scanner;   //importing Scanner class
 
-public class Main {
+public class Lottery {
     public static void main (String[] args)
     {
-<<<<<<< HEAD
 
         int qui = 3;
         int sum = 0;
