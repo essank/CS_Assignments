@@ -13,9 +13,10 @@
 import java.util.Random;    //importing Random class
 import java.util.Scanner;   //importing Scanner class
 
-public class Lottery {
+public class Main {
     public static void main (String[] args)
     {
+<<<<<<< HEAD
 
         int qui = 3;
         int sum = 0;
@@ -104,3 +105,4 @@ public class Lottery {
         }//while
     }
 }
+
