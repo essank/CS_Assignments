@@ -21,7 +21,7 @@ public class Lottery {
         int quit = 0;
         int loob = 0;
         int lol = 0;
-        boolean flag1 = false;
+        boolean flag1 = true;
         boolean flag2 = false;
         boolean flag3 = false;
         int[] Player_Numbers = new int[6];
@@ -59,7 +59,7 @@ public class Lottery {
                             "===============\n" +
                             "1. Choose Your Numbers\n" +
                             "2. Quick Pick");
-                    flag1 = false;
+                    flag1 = true;
 
                     while (flag1) {
                         try {
@@ -69,7 +69,7 @@ public class Lottery {
                             lol = Integer.parseInt(choice);
 
                             if (lol == 1 || lol == 2) {
-                                flag1 = true;
+                                flag1 = false;
                             }
                         } catch (NumberFormatException exception) {
                             continue;
@@ -108,7 +108,7 @@ public class Lottery {
                                     num++;
                                 }
                             }
-                            catch (NumberFormatException)
+                            catch (NumberFormatException ex)
                             {
                                 continue;
                             }
