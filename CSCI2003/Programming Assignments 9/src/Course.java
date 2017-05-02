@@ -9,11 +9,13 @@
 
 public class Course
 {
+    //create variables
     private String CourseName;
     private String CourseCode;
     private int SectionNumber;
     private int AvailableSeats;
 
+    //array to hold Student object
     Student[] studentArray = new Student[35];
     private static int enrollment = 0;
 
@@ -77,12 +79,14 @@ public class Course
         return AvailableSeats;
     }
 
+    //adding student method
     public void addStudent(Course other)
     {
         if (AvailableSeats <35)
         {
             for ( int i=0; i<studentArray.length; i++) {
                 studentArray[i]=new Student();
+                enrollment++;
             }
         }
 
@@ -90,9 +94,9 @@ public class Course
         {
             System.out.printf("\nClass Full!");
         }
-
     }
 
+    //display course info method
     public void displayCourseInfo()
     {
         System.out.println("\n" + getSectionNumber() +
@@ -100,9 +104,9 @@ public class Course
                 ":  " + getCourseName());
     }
 
+    //display students method
     public void displayStudents(Course studentID, Course studentName)
     {
         System.out.printf("\n %d %s", studentID, studentName);
-
     }
 }

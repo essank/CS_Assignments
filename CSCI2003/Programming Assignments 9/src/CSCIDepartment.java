@@ -13,18 +13,22 @@ public class CSCIDepartment
 {
     public static void main (String[] args)
     {
+        //creating objects
         Course course1 = new Course("Introduction to Programming", "CSCI 2000", 60536, 35);
         Course course2 = new Course("Intermediate Programming", "CSCI 2003", 63972, 35);
         Student student91 = new Student("Issa", 12345);
 
+        //flag variable
         boolean flag = false;
 
         System.out.print("\nCourse Information Access");
         System.out.print("\n=========================");
 
+        //starting while loop
         while (!flag)
         {
 
+            //printing the options
             System.out.print("\n\nOptions");
             System.out.print("\n=======");
             System.out.print("\n1. View Available Course Information");
@@ -33,13 +37,17 @@ public class CSCIDepartment
             System.out.print("\n4. View Total Enrollment for Department");
             System.out.print("\n5. Quit");
 
+            //ask the user to take a choice
             System.out.print("\n\nEnter choice (1 - 5): ");
 
+            //scanner the choice
             Scanner in = new Scanner(System.in);
             int ch = in.nextInt();
 
+            // if for choice
             if (ch == 1)
             {
+                // printing available courses
                 System.out.print("\n\n----------------------------------------------------");
                 System.out.print("\n\nAvailable Courses");
                 System.out.print("\n\n=================");
@@ -56,6 +64,7 @@ public class CSCIDepartment
                 System.out.print("\n\n----------------------------------------------------");
             }
 
+            //display course option
             else if (ch == 2)
             {
                 System.out.print("\n----------------------------------------------------");
@@ -64,10 +73,12 @@ public class CSCIDepartment
                 System.out.print("\n1. Introduction to Programming");
                 System.out.print("\n2. Intermediate Programming");
 
+                //asking the user to choose a course
                 System.out.print("\n\nEnter choice (1 or 2): ");
                 Scanner in2 = new Scanner(System.in);
                 int ch2 = in2.nextInt();
 
+                // display course 1
                 if (ch2 == 1)
                 {
                     System.out.print("\n"+ course1.getCourseCode() + " - " + course1.getSectionNumber()+": " + course1.getCourseName());
@@ -83,6 +94,7 @@ public class CSCIDepartment
                     }
                 }
 
+                //display course 2
                 else if (ch2 == 2)
                 {
                     System.out.print("\n"+ course2.getCourseCode() + " - " + course2.getSectionNumber()+": " + course2.getCourseName());
@@ -101,6 +113,7 @@ public class CSCIDepartment
 
             }
 
+            //adding student to course
             else if (ch == 3)
             {
                 System.out.print("\n\n----------------------------------------------------");
@@ -109,10 +122,12 @@ public class CSCIDepartment
                 System.out.print("\n1. Introduction to Programming");
                 System.out.print("\n2. Intermediate Programming");
 
+                //ask the user to know which course
                 System.out.print("\n\nEnter choice (1 or 2): ");
                 Scanner in3 = new Scanner(System.in);
                 int ch3 = in3.nextInt();
 
+                //adding the user to course 1
                 if (ch3 == 1)
                 {
                     System.out.print("\n\nAdd a Student");
@@ -127,6 +142,7 @@ public class CSCIDepartment
                     student91.setID(studentID);
                 }
 
+                //adding the user to course 2
                 else if (ch3 == 2)
                 {
                     System.out.print("\n\nAdd a Student");
@@ -142,6 +158,7 @@ public class CSCIDepartment
                 }
             }
 
+            //display students enrolled
             else if (ch == 4)
             {
                 System.out.print("\n\n----------------------------------------------------");
@@ -149,6 +166,7 @@ public class CSCIDepartment
                 System.out.print("\n\n----------------------------------------------------");
             }
 
+            //quit
             else if (ch == 5)
             {
                 System.out.print("\n\n----------------------------------------------------");
