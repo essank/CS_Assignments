@@ -77,7 +77,7 @@ public class Course
         return AvailableSeats;
     }
 
-    public void addStudent (Course other)
+    public void addStudent(Course other)
     {
         if (enrollment <= 35)
         {
@@ -87,10 +87,15 @@ public class Course
         }
     }
 
-    public void displayCourseInfo ()
+    public void displayCourseInfo()
     {
         System.out.println("\n" + getSectionNumber() +
                 " - " + getCourseCode() +
                 ":  " + getCourseName());
+    }
+
+    public void displayStudents()
+    {
+
     }
 }

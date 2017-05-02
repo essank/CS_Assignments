@@ -18,11 +18,11 @@ public class CSCIDepartment
         Student student91 = new Student("Issa", 12345);
 
         Student student1 = new Student();
-        boolean flag = true;
+        boolean flag = false;
 
-        while (flag)
+        while (!flag)
         {
-            System.out.println("Course Information Access");
+            System.out.println("\n\nCourse Information Access");
             System.out.println("\n=========================");
 
             System.out.println("\n\nOptions");
@@ -49,7 +49,7 @@ public class CSCIDepartment
                 System.out.print("\nSection:  " + course1.getSectionNumber());
                 System.out.print("\nSeats:  " + course1.getAvailableSeats());
 
-                System.out.print("\nName:  " + course2.getCourseName());
+                System.out.print("\n\nName:  " + course2.getCourseName());
                 System.out.print("\nCourse:  " + course2.getCourseCode());
                 System.out.print("\nSection:  " + course2.getSectionNumber());
                 System.out.print("\nSeats:  " + course2.getAvailableSeats());
@@ -123,12 +123,16 @@ public class CSCIDepartment
 
                 else if (ch == 4)
                 {
-
+                    System.out.print("\n\n----------------------------------------------------");
+                    System.out.print("\n\nTotal Students Enrolled: " );
+                    System.out.print("\n\n----------------------------------------------------");
                 }
 
                 else if (ch == 5)
                 {
-
+                    System.out.print("\n\n----------------------------------------------------");
+                    System.out.print("\n\nGoodbye!");
+                    flag = true;
                 }
             }
         }
