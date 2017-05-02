@@ -32,12 +32,12 @@ public class Student
 
     public void setStudentName(String st)
     {
-        StudentName = st;
+        this.StudentName = st;
     }
 
     public void setID(int ID)
     {
-        ID = ID;
+        this.ID = ID;
     }
 
     //create getters

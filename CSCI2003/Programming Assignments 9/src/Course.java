@@ -38,22 +38,22 @@ public class Course
     //seaters
     public void setCourseName(String CName)
     {
-        CourseName = CName;
+        this.CourseName = CName;
     }
 
     public void setCourseCode(String CCode)
     {
-        CourseCode = CCode;
+        this.CourseCode = CCode;
     }
 
     public void setSectionNumber(int SNum)
     {
-        SectionNumber = SNum;
+        this.SectionNumber = SNum;
     }
 
     public void setAvailableSeats(int ASeats)
     {
-        AvailableSeats = ASeats;
+        this.AvailableSeats = ASeats;
     }
 
     //getters
@@ -79,12 +79,18 @@ public class Course
 
     public void addStudent(Course other)
     {
-        if (enrollment <= 35)
+        if (AvailableSeats <35)
         {
             for ( int i=0; i<studentArray.length; i++) {
                 studentArray[i]=new Student();
             }
         }
+
+        else
+        {
+            System.out.printf("\nClass Full!");
+        }
+
     }
 
     public void displayCourseInfo()
@@ -94,8 +100,9 @@ public class Course
                 ":  " + getCourseName());
     }
 
-    public void displayStudents()
+    public void displayStudents(Course studentID, Course studentName)
     {
+        System.out.printf("\n %d %s", studentID, studentName);
 
     }
 }
