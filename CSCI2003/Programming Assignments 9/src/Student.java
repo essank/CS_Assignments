@@ -1,6 +1,6 @@
-// Name: Issa Alkhamees Date Assigned: 4/27
+// Name: Issa Alkhamees        Date Assigned: 4/27
 //
-// Course: CSCI 2003 42733 Date Due: 5/2
+// Course: CSCI 2003 42733     Date Due: 5/2
 // Instructor: Ms. Greer
 //
 // File name: Student.java
