@@ -142,16 +142,16 @@ public class CSCIDepartment
             //display students enrolled
             else if (ch == 4)
             {
-                System.out.print("\n\n----------------------------------------------------");
-                System.out.print("\n\nTotal Students Enrolled: " + Course.enrollment);
-                System.out.print("\n\n----------------------------------------------------");
+                System.out.println("\n----------------------------------------------------");
+                System.out.println("\nTotal Students Enrolled: " + Course.enrollment);
+                System.out.println("\n----------------------------------------------------");
             }
 
             //quit
             else if (ch == 5)
             {
-                System.out.print("\n\n----------------------------------------------------");
-                System.out.print("\n\nGoodbye!");
+                System.out.println("\n----------------------------------------------------");
+                System.out.println("\nGoodbye!");
                 flag = true;
                 break;
             }
