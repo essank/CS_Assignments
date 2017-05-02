@@ -25,7 +25,7 @@ public class Student
     public Student (String st, int ID)
     {
         StudentName = st;
-        ID = ID;
+        this.ID = ID;
     }
 
     // create setters
