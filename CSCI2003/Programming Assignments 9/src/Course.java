@@ -1,6 +1,6 @@
-// Name: Issa Alkhamees Date Assigned: 4/27
+// Name: Issa Alkhamees          Date Assigned: 4/27
 //
-// Course: CSCI 2003 42733 Date Due: 5/2
+// Course: CSCI 2003 42733       Date Due: 5/2
 // Instructor: Ms. Greer
 //
 // File name: Course.java
@@ -14,10 +14,12 @@ public class Course
     private String CourseCode;
     private int SectionNumber;
     private int AvailableSeats;
-
+    private int lool;
     //array to hold Student object
-    Student[] studentArray = new Student[35];
-    private static int enrollment = 0;
+    private Student[]studentArray;
+   
+
+    public static int enrollment = 0;
 
     //no-argument constructor
     public Course()
@@ -80,33 +82,55 @@ public class Course
     }
 
     //adding student method
-    public void addStudent(Course other)
+    public void addStudent(Student other)
     {
-        if (AvailableSeats <35)
-        {
-            for ( int i=0; i<studentArray.length; i++) {
-                studentArray[i]=new Student();
-                enrollment++;
-            }
-        }
 
+        if(AvailableSeats == 0)
+        {
+            System.out.println("Class Full!");
+        }
+        
         else
         {
-            System.out.printf("\nClass Full!");
+            studentArray[enrollment] = other;
+            AvailableSeats -= 1;
+            enrollment += 1;
+            lool++;
         }
     }
 
     //display course info method
     public void displayCourseInfo()
     {
-        System.out.println("\n" + getSectionNumber() +
-                " - " + getCourseCode() +
-                ":  " + getCourseName());
+        System.out.println();
+        System.out.print("Name:    " + CourseName);
+        System.out.printf("\nCourse:%11s",CourseCode);
+        System.out.printf("\nSection:%6d",SectionNumber);
+        System.out.printf("\nSeats:%5d",AvailableSeats);
+        System.out.println();
     }
 
     //display students method
-    public void displayStudents(Course studentID, Course studentName)
+    public void displayStudents()
     {
-        System.out.printf("\n %d %s", studentID, studentName);
+        System.out.println();
+        System.out.println(CourseCode+" - " + SectionNumber + ": " + CourseName);
+
+        if(AvailableSeats == 35)
+        {
+            System.out.println("\nNo students enrolled!");
+        }
+
+        else
+        {
+            System.out.println("\nID             Name"+
+                               "\n--             ----");
+
+            for(int k=0; k<lool; k++)
+            {
+                System.out.printf("%-15d%-19s",studentArray[k].getID(),studentArray[k].getStudentName());
+                System.out.println();
+            }
+        }
     }
 }
