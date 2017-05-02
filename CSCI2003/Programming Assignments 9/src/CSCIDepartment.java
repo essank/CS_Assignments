@@ -1,6 +1,6 @@
-// Name: Issa Alkhamees Date Assigned: 4/27
+// Name: Issa Alkhamees        Date Assigned: 4/27
 //
-// Course: CSCI 2003 42733 Date Due: 5/2
+// Course: CSCI 2003 42733     Date Due: 5/2
 // Instructor: Ms. Greer
 //
 // File name: CSCIDepartment.java
@@ -16,7 +16,6 @@ public class CSCIDepartment
         //creating objects
         Course course1 = new Course("Introduction to Programming", "CSCI 2000", 60536, 35);
         Course course2 = new Course("Intermediate Programming", "CSCI 2003", 63972, 35);
-        Student student91 = new Student("Issa", 12345);
 
         //flag variable
         boolean flag = false;
@@ -81,36 +80,14 @@ public class CSCIDepartment
                 // display course 1
                 if (ch2 == 1)
                 {
-                    System.out.print("\n"+ course1.getCourseCode() + " - " + course1.getSectionNumber()+": " + course1.getCourseName());
-                    if (course1.getAvailableSeats() == 0)
-                    {
-                        System.out.print("\n\nNo students enrolled!");
-                    }
-                    else
-                    {
-                        System.out.print("\n\nID           Name");
-                        System.out.print("\n--           ----");
-                        System.out.printf("\n%d         %s", student91.getID(), student91.getStudentName());
-                    }
+                     course1.displayStudents();
                 }
 
                 //display course 2
                 else if (ch2 == 2)
                 {
-                    System.out.print("\n"+ course2.getCourseCode() + " - " + course2.getSectionNumber()+": " + course2.getCourseName());
-                    if (course2.getAvailableSeats() == 0)
-                    {
-                        System.out.println("\n\nNo students enrolled!");
-                    }
-
-                    else
-                    {
-                        System.out.print("\n\nID           Name");
-                        System.out.print("\n--           ----");
-                        System.out.printf("\n%d         %s", student91.getID(), student91.getStudentName());
-                    }
+                     course2.displayStudents();
                 }
-
             }
 
             //adding student to course
@@ -135,11 +112,13 @@ public class CSCIDepartment
 
                     System.out.print("\nEnter Student's Name: ");
                     String studentName = in.next();
-                    student91.setStudentName(studentName);
 
                     System.out.print("\nEnter Student's ID: ");
                     int studentID = in.nextInt();
-                    student91.setID(studentID);
+                    
+                    //Create student object for course 1
+                    Student student99 = new Student(studentName,studentID);
+                    course1.addStudent(student99);
                 }
 
                 //adding the user to course 2
@@ -150,11 +129,13 @@ public class CSCIDepartment
 
                     System.out.print("\nEnter Student's Name: ");
                     String studentName = in.next();
-                    student91.setStudentName(studentName);
 
                     System.out.print("\nEnter Student's ID: ");
                     int studentID = in.nextInt();
-                    student91.setID(studentID);
+                    
+                    //Create student object for course 2
+                    Student student99 = new Student(studentName,studentID);
+                    course2.addStudent(student99);
                 }
             }
 
@@ -162,7 +143,7 @@ public class CSCIDepartment
             else if (ch == 4)
             {
                 System.out.print("\n\n----------------------------------------------------");
-                System.out.printf("\n\nTotal Students Enrolled: %d" , course1.getAvailableSeats() - course2.getAvailableSeats());
+                System.out.print("\n\nTotal Students Enrolled: " + Course.enrollment);
                 System.out.print("\n\n----------------------------------------------------");
             }
 
