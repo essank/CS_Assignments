@@ -14,9 +14,9 @@ public class Course
     private String CourseCode;
     private int SectionNumber;
     private int AvailableSeats;
-    private int lool;
+    private int lool=0;
     //array to hold Student object
-    private Student[]studentArray;
+    private Student[] studentArray;
    
 
     public static int enrollment = 0;
@@ -28,6 +28,7 @@ public class Course
         CourseCode = " ";
         SectionNumber = 0;
         AvailableSeats = 35;
+        studentArray = new Student[35]; 
     }
 
     //argument constructor
@@ -37,6 +38,7 @@ public class Course
         CourseCode = CCode;
         SectionNumber = SNum;
         AvailableSeats = ASeats;
+        studentArray = new Student[35];
     }
 
     //seaters
@@ -59,6 +61,14 @@ public class Course
     {
         this.AvailableSeats = ASeats;
     }
+    
+    public void setStudentArray(Student[]  stuNum)
+    {
+         this.studentArray = stuNum;
+    }
+    
+    
+    
 
     //getters
     public String getCourseName()
@@ -80,6 +90,11 @@ public class Course
     {
         return AvailableSeats;
     }
+    
+    public Student[] getStudentArray()
+    {
+      return studentArray;
+    }
 
     //adding student method
     public void addStudent(Student other)
@@ -92,7 +107,7 @@ public class Course
         
         else
         {
-            studentArray[enrollment] = other;
+            studentArray[lool] = other;
             AvailableSeats -= 1;
             enrollment += 1;
             lool++;
@@ -126,9 +141,9 @@ public class Course
             System.out.println("\nID             Name"+
                                "\n--             ----");
 
-            for(int k=0; k<lool; k++)
+            for(int k = 0; k < lool; k++)
             {
-                System.out.printf("%-15d%-19s",studentArray[k].getID(),studentArray[k].getStudentName());
+                System.out.printf("%-15d%-19s",studentArray[k].getID(), studentArray[k].getStudentName());
                 System.out.println();
             }
         }
