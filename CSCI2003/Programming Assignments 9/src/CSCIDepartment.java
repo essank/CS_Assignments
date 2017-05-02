@@ -15,17 +15,18 @@ public class CSCIDepartment
     {
         Course course1 = new Course("Introduction to Programming", "CSCI 2000", 60536, 35);
         Course course2 = new Course("Intermediate Programming", "CSCI 2003", 63972, 34);
+        Student student91 = new Student("Issa", 12345);
 
         Student student1 = new Student();
         boolean flag = true;
 
         while (flag)
         {
-            System.out.print("Course Information Access");
-            System.out.print("\n=========================");
+            System.out.println("Course Information Access");
+            System.out.println("\n=========================");
 
-            System.out.print("\n\nOptions");
-            System.out.print("\n=======");
+            System.out.println("\n\nOptions");
+            System.out.println("\n=======");
             System.out.print("\n1. View Available Course Information");
             System.out.print("\n2. View Students Enrolled in Course");
             System.out.print("\n3. Add Student to a Course");
@@ -84,13 +85,50 @@ public class CSCIDepartment
                     System.out.print("\n\n"+ course2.getCourseCode() + " - " + course2.getSectionNumber()+": " + course2.getCourseName());
                     if (course2.getAvailableSeats() == 0)
                     {
-                        System.out.print("\n\nNo students enrolled!");
+                        System.out.println("\n\nNo students enrolled!");
                     }
 
                     else
                     {
-                        System.out.print("\n\n" + course2.getAvailableSeats());
+                        System.out.println("\n\n" + course2.getAvailableSeats());
                     }
+                }
+
+                else if (ch == 3)
+                {
+                    System.out.print("\n\n----------------------------------------------------");
+                    System.out.print("\n\nCourse Options");
+                    System.out.print("\n==============");
+                    System.out.print("\n1. Introduction to Programming");
+                    System.out.print("\n2. Intermediate Programming");
+
+                    System.out.print("\n\nEnter choice (1 or 2): ");
+                    Scanner in3 = new Scanner(System.in);
+                    int ch3 = in3.nextInt();
+
+                    if (ch3 == 1)
+                    {
+                        System.out.print("\n\nAdd a Student");
+                        System.out.print("\n=============");
+                        //System.out.print("Enter Student's Name: " + course2.addStudent());
+                    }
+                    else if (ch3 == 2)
+                    {
+                        System.out.print("\n\nAdd a Student");
+                        System.out.print("\n=============");
+                        //System.out.print("Enter Student's Name: " + course2.addStudent());
+                    }
+
+                }
+
+                else if (ch == 4)
+                {
+
+                }
+
+                else if (ch == 5)
+                {
+
                 }
             }
         }
