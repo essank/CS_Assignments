@@ -10,9 +10,12 @@
 public class Course
 {
     private String CourseName;
-    private int CourseCode;
+    private String CourseCode;
     private int SectionNumber;
     private int AvailableSeats;
+
+    Student studentArray[] = new Student[0];
+    public static int enrollment = 0;
 
     //no-argument constructor
     public Course()
@@ -20,11 +23,11 @@ public class Course
         CourseName = " ";
         CourseCode = 0;
         SectionNumber = 0;
-        AvailableSeats = 0;
+        AvailableSeats = 35;
     }
 
     //argument constructor
-    public Course (String CName, int CCode, int SNum, int ASeats)
+    public Course (String CName, String CCode, int SNum, int ASeats)
     {
         CourseName = CName;
         CourseCode = CCode;
@@ -74,4 +77,18 @@ public class Course
         return AvailableSeats;
     }
 
+    public void addStudent (Course other)
+    {
+        if (enrollment <= 35)
+        {
+
+        }
+    }
+
+    public void displayCourseInfo ()
+    {
+        System.out.println("\n" + getSectionNumber() +
+                " - " + getCourseCode() +
+                ":  " + getCourseName());
+    }
 }
