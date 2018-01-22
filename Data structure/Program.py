@@ -22,10 +22,22 @@ def menu():
     6.Quit
     ''')
 
+    option = input(int("which number do you want? "))
+
     # read the file
     inFile = open("worldSeries.txt", "r")
 
+    AL = []
+    NL = []
+    timeWin = []
+    whereWin = []
+
+    while True:
+
+       
 
 
     # close the file
     inFile.close()
+
+menu()
