@@ -16,3 +16,7 @@ class Employee:
     #get Employee Number
     def getEmployeeNumber(self):
         return self.employeeNumber
+
+class ProductionWorker(Employee):
+    def __init__(self, shiftNumber, payRate ):
+        Employee.__init__(self, shiftNumber, payRate)
