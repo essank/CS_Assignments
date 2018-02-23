@@ -1,4 +1,5 @@
-from Employee import Employee
+#!/usr/bin/env python
+from Employee import *
 
 def main():
     print('Enter Employee details: ')
@@ -9,10 +10,11 @@ def main():
 
     emp = ProductionWorker(name, number, shift, payRate)
 
-    print('Details of employee are shown below: ')
+    print('\n\nDetails of employee are shown below: ')
     print('Name: ', emp.getEmployeeName())
     print('Employee number: ', emp.getEmployeeNumber())
-    print('Shift Number: ', emp.getEmployeeNumber())
-    print('Pay rate: ', emp.getHourlyPayRate)
+    print('Shift Number: ', emp.getShiftNumber())
+    print('Pay rate: ', emp.getHourlyPayRate())
 
+#test class
 main()
